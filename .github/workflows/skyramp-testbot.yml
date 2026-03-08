@@ -30,7 +30,7 @@ jobs:
           target_setup_command: './deployment-testbot/setup.sh'
           target_ready_check_command: 'curl -f http://localhost:8000/health'
           auth_token_command: './deployment-testbot/get-token.sh'
-          target_teardown_command: 'docker-compose -f deployment-testbot/docker-compose.yml down'
+          target_teardown_command: 'docker compose -f deployment-testbot/docker-compose.yml down'
 
           test_directory: 'tests'
           auto_commit: true

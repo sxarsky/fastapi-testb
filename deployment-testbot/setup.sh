@@ -7,7 +7,7 @@ set -e
 cd "$(dirname "$0")"
 
 echo "Starting FastAPI service..."
-docker-compose up -d
+docker compose up -d
 
 echo "Waiting for service to be ready..."
 # Brief wait for container to initialize
