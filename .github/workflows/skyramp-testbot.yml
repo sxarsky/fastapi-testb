@@ -1,7 +1,11 @@
-name: Skyramp TestBot
+name: Skyramp Testbot
 on:
   pull_request:
-    branches: [main, master, develop]
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
 
 jobs:
   test-maintenance:
@@ -16,11 +20,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Run Skyramp TestBot
-        uses: skyramp/testbot@v1
+      - name: Run Skyramp Testbot
+        uses: skyramp/testbot@v0.2.0
         with:
           skyramp_license_file: ${{ secrets.SKYRAMP_LICENSE }}
-          cursor_api_key: ${{ secrets.CURSOR_API_KEY }}
+          anthropic_api_key: ${{ secrets.SKYRAMP_TESTBOT_API_KEY }}
+          pat_token: ${{ secrets.PAT_TOKEN }}
 
           target_setup_command: './deployment-testbot/setup.sh'
           target_ready_check_command: 'curl -f http://localhost:8000/health'
