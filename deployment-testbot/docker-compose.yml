@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  fastapi:
+    image: tiangolo/uvicorn-gunicorn-fastapi:python3.11
+    container_name: testbot-fastapi
+    ports:
+      - "8000:80"
+    volumes:
+      - ./app:/app
+    environment:
+      - MODULE_NAME=main
+      - VARIABLE_NAME=app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/docs"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s

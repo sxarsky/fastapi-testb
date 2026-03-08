@@ -1,0 +1,34 @@
+name: Skyramp TestBot
+on:
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  test-maintenance:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Skyramp TestBot
+        uses: skyramp/testbot@v1
+        with:
+          skyramp_license_file: ${{ secrets.SKYRAMP_LICENSE }}
+          cursor_api_key: ${{ secrets.CURSOR_API_KEY }}
+
+          target_setup_command: './deployment-testbot/setup.sh'
+          target_ready_check_command: 'curl -f http://localhost:8000/health'
+          auth_token_command: './deployment-testbot/get-token.sh'
+          target_teardown_command: 'docker-compose -f deployment-testbot/docker-compose.yml down'
+
+          test_directory: 'tests'
+          auto_commit: true
+          post_pr_comment: true
+          enable_debug: true
+          commit_message: 'TestBot: update tests for fastapi'
