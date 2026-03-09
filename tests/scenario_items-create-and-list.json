@@ -1,0 +1,54 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Electronics Widget\", \"description\": \"A test electronics item\", \"price\": 29.99, \"tax\": 2.50, \"category\": \"electronics\"}",
+    "ResponseBody": "{\"id\": 1, \"name\": \"Electronics Widget\", \"description\": \"A test electronics item\", \"price\": 29.99, \"tax\": 2.50, \"category\": \"electronics\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-09T20:43:47.316Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "[{\"id\": 1, \"name\": \"Electronics Widget\", \"description\": \"A test electronics item\", \"price\": 29.99, \"tax\": 2.50, \"category\": \"electronics\"}]",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-09T20:43:58.316Z",
+    "Scheme": "http"
+  }
+]
