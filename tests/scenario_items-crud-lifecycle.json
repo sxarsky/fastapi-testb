@@ -1,0 +1,106 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Test Item\", \"description\": \"A test item\", \"price\": 9.99, \"tax\": 0.5}",
+    "ResponseBody": "{\"id\": 1, \"name\": \"Test Item\", \"description\": \"A test item\", \"price\": 9.99, \"tax\": 0.5}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer demo-token"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 443,
+    "Timestamp": "2026-03-09T19:12:55.636Z",
+    "Scheme": "https"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": 1, \"name\": \"Test Item\", \"description\": \"A test item\", \"price\": 9.99, \"tax\": 0.5}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer demo-token"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/items/1",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 443,
+    "Timestamp": "2026-03-09T19:13:02.243Z",
+    "Scheme": "https"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Updated Item\", \"description\": \"An updated item\", \"price\": 19.99, \"tax\": 1.5}",
+    "ResponseBody": "{\"id\": 1, \"name\": \"Updated Item\", \"description\": \"An updated item\", \"price\": 19.99, \"tax\": 1.5}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer demo-token"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/items/1",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 443,
+    "Timestamp": "2026-03-09T19:13:05.959Z",
+    "Scheme": "https"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer demo-token"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/items/1",
+    "QueryParams": {},
+    "StatusCode": 204,
+    "Port": 443,
+    "Timestamp": "2026-03-09T19:13:08.951Z",
+    "Scheme": "https"
+  }
+]
