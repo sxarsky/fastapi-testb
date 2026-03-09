@@ -546,3 +546,11 @@ Additional optional FastAPI dependencies:
 ## License
 
 This project is licensed under the terms of the MIT license.
+
+---
+
+## TestBot Validation
+
+This fork is being used to validate Skyramp TestBot's test recommendation capabilities.
+
+**Baseline Test:** Verifying TestBot workflow executes successfully with minimal app.
