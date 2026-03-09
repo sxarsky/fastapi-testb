@@ -1,11 +1,15 @@
 from fastapi import FastAPI
 from datetime import datetime
+from routers import items
 
 app = FastAPI(
     title="TestBot FastAPI Demo",
     description="Demo API for TestBot validation",
     version="1.0.0"
 )
+
+# Include routers
+app.include_router(items.router)
 
 
 @app.get("/")
