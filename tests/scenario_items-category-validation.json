@@ -1,0 +1,80 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Test Book\", \"description\": \"A test book\", \"price\": 19.99}",
+    "ResponseBody": "{\"detail\": [{\"type\": \"missing\", \"loc\": [\"body\", \"category\"], \"msg\": \"Field required\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 422,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T13:55:42.352Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Test Book\", \"description\": \"A test book\", \"price\": 19.99, \"category\": \"invalid_category\"}",
+    "ResponseBody": "{\"detail\": [{\"type\": \"enum\", \"loc\": [\"body\", \"category\"], \"msg\": \"Input should be 'electronics', 'clothing', 'food', 'books' or 'other'\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 422,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T13:55:49.089Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Python Cookbook\", \"description\": \"A comprehensive Python programming book\", \"price\": 49.99, \"tax\": 4.5, \"category\": \"books\"}",
+    "ResponseBody": "{\"id\": 1, \"name\": \"Python Cookbook\", \"description\": \"A comprehensive Python programming book\", \"price\": 49.99, \"tax\": 4.5, \"category\": \"books\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T13:55:55.008Z",
+    "Scheme": "http"
+  }
+]

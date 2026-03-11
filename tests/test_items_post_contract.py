@@ -29,6 +29,7 @@ def test_endpoint_post():
 
     # Request Body
     endpoint_POST_request_body = r'''{
+        "category": "electronics",
         "description": "A professional-grade widget",
         "name": "Widget Pro",
         "price": 29.99,
