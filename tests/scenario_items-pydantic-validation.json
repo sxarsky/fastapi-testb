@@ -1,0 +1,54 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Test Widget\", \"description\": \"A test widget for validation\", \"price\": 19.99, \"tax\": 1.50}",
+    "ResponseBody": "{\"id\": 1, \"name\": \"Test Widget\", \"description\": \"A test widget for validation\", \"price\": 19.99, \"tax\": 1.50}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T11:35:08.132Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Invalid Widget\", \"description\": \"Update with negative price\", \"price\": -5.00, \"tax\": 0.00}",
+    "ResponseBody": "{\"detail\": [{\"type\": \"greater_than\", \"loc\": [\"body\", \"price\"], \"msg\": \"Input should be greater than 0\", \"input\": -5.0}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/items/1",
+    "QueryParams": {},
+    "StatusCode": 422,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T11:35:13.173Z",
+    "Scheme": "http"
+  }
+]
