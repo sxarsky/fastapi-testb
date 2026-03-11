@@ -25,7 +25,8 @@ def test_integration():
         "description": "Temporary item for error handling test",
         "name": "Temp Item",
         "price": 9.99,
-        "tax": 1
+        "tax": 1,
+        "category": "other"
     }'''
     
     # Execute Request
