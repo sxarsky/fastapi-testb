@@ -22,6 +22,7 @@ def test_integration():
     client = skyramp.Client()
     # Request Body
     endpoint_1_POST_request_body = r'''{
+        "category": "electronics",
         "description": "A test widget for validation",
         "name": "Test Widget",
         "price": 19.99,
@@ -41,6 +42,7 @@ def test_integration():
 
     # Request Body
     items_PUT_request_body = r'''{
+        "category": "electronics",
         "description": "Update with negative price",
         "name": "Invalid Widget",
         "price": -5,

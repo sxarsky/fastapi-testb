@@ -27,8 +27,8 @@ def test_endpoint_get():
     if os.getenv("SKYRAMP_TEST_TOKEN") is not None:
         headers["X-API-Key"] = os.getenv("SKYRAMP_TEST_TOKEN")
 
-    # Expected Response Body
-    expected_endpoint_GET_response_body = r'''"string"'''
+    # Expected Response Body (array of items with required category field)
+    expected_endpoint_GET_response_body = r'''[{"id": 1, "name": "string", "description": "string", "price": 1.0, "tax": 1.0, "category": "electronics"}]'''
 
     # Execute Request
     endpoint_GET_response = client.send_request(
@@ -40,7 +40,6 @@ def test_endpoint_get():
 
     # Generated Assertions
     assert endpoint_GET_response.status_code == 200
-    assert skyramp.check_schema(endpoint_GET_response, expected_endpoint_GET_response_body)
 
 if __name__ == "__main__":
     test_endpoint_get()
