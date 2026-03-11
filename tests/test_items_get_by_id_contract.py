@@ -19,7 +19,7 @@ import time
 # URL for test requests
 URL = "http://localhost:8000"
 
-# contract test for /items/1 GET
+# contract test for /items/{item_id} GET
 def test_endpoint_1_get():
     # Invocation of Skyramp Client
     client = skyramp.Client()
@@ -28,15 +28,34 @@ def test_endpoint_1_get():
     if os.getenv("SKYRAMP_TEST_TOKEN") is not None:
         headers["X-API-Key"] = os.getenv("SKYRAMP_TEST_TOKEN")
 
-    # Expected Response Body
-    expected_endpoint_1_GET_response_body = r'''"string"'''
+    # Create item first to get a valid ID (required by new category field)
+    setup_request_body = r'''{
+        "category": "books",
+        "description": "Contract test item",
+        "name": "Contract Widget",
+        "price": 15.99,
+        "tax": 1.5
+    }'''
+    setup_response = client.send_request(
+        url=URL,
+        path="/items/",
+        method="POST",
+        body=setup_request_body,
+        headers=headers
+    )
+    assert setup_response.status_code == 201
+    item_id = skyramp.get_response_value(setup_response, "id")
+
+    # Expected Response Body (item object with required category field)
+    expected_endpoint_1_GET_response_body = r'''{"id": 1, "name": "string", "description": "string", "price": 1.0, "tax": 1.0, "category": "books"}'''
 
     # Execute Request
     endpoint_1_GET_response = client.send_request(
         url=URL,
-        path="/items/1",
+        path="/items/{item_id}",
         method="GET",
-        headers=headers
+        headers=headers,
+        path_params={"item_id": item_id}
     )
 
     # Generated Assertions
