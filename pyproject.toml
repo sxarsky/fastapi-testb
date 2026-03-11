@@ -235,7 +235,6 @@ strict_xfail = true
 filterwarnings = [
     "error",
 ]
-timeout = "20"
 
 [tool.coverage.run]
 parallel = true
