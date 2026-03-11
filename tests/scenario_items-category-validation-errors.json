@@ -1,0 +1,106 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Test Item\", \"description\": \"Missing category field\", \"price\": 19.99, \"tax\": 2.0}",
+    "ResponseBody": "{\"detail\": [{\"type\": \"missing\", \"loc\": [\"body\", \"category\"], \"msg\": \"Field required\", \"input\": {\"name\": \"Test Item\", \"description\": \"Missing category field\", \"price\": 19.99, \"tax\": 2.0}}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 422,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T12:21:42.726Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Test Item\", \"description\": \"Invalid category value\", \"price\": 19.99, \"tax\": 2.0, \"category\": \"gadgets\"}",
+    "ResponseBody": "{\"detail\": [{\"type\": \"enum\", \"loc\": [\"body\", \"category\"], \"msg\": \"Input should be 'electronics', 'clothing', 'food', 'books' or 'other'\", \"input\": \"gadgets\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 422,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T12:21:47.624Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Organic Bread\", \"description\": \"Freshly baked sourdough\", \"price\": 6.99, \"tax\": 0.5, \"category\": \"food\"}",
+    "ResponseBody": "{\"id\": 1, \"name\": \"Organic Bread\", \"description\": \"Freshly baked sourdough\", \"price\": 6.99, \"tax\": 0.5, \"category\": \"food\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T12:21:53.132Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/items/1",
+    "QueryParams": {},
+    "StatusCode": 204,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T12:21:56.748Z",
+    "Scheme": "http"
+  }
+]

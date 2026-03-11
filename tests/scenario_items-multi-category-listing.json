@@ -1,0 +1,106 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\":\"Wireless Earbuds\",\"description\":\"Bluetooth earbuds with noise cancellation\",\"price\":79.99,\"tax\":7.99,\"category\":\"electronics\"}",
+    "ResponseBody": "{\"id\":1,\"name\":\"Wireless Earbuds\",\"description\":\"Bluetooth earbuds with noise cancellation\",\"price\":79.99,\"tax\":7.99,\"category\":\"electronics\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T12:31:07.440Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\":\"Winter Jacket\",\"description\":\"Warm insulated winter jacket\",\"price\":149.99,\"tax\":14.99,\"category\":\"clothing\"}",
+    "ResponseBody": "{\"id\":2,\"name\":\"Winter Jacket\",\"description\":\"Warm insulated winter jacket\",\"price\":149.99,\"tax\":14.99,\"category\":\"clothing\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T12:31:18.255Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\":\"Python Programming Guide\",\"description\":\"Comprehensive Python programming reference\",\"price\":34.99,\"tax\":2.99,\"category\":\"books\"}",
+    "ResponseBody": "{\"id\":3,\"name\":\"Python Programming Guide\",\"description\":\"Comprehensive Python programming reference\",\"price\":34.99,\"tax\":2.99,\"category\":\"books\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T12:31:24.629Z",
+    "Scheme": "http"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "[{\"id\":1,\"name\":\"Wireless Earbuds\",\"description\":\"Bluetooth earbuds with noise cancellation\",\"price\":79.99,\"tax\":7.99,\"category\":\"electronics\"},{\"id\":2,\"name\":\"Winter Jacket\",\"description\":\"Warm insulated winter jacket\",\"price\":149.99,\"tax\":14.99,\"category\":\"clothing\"},{\"id\":3,\"name\":\"Python Programming Guide\",\"description\":\"Comprehensive Python programming reference\",\"price\":34.99,\"tax\":2.99,\"category\":\"books\"}]",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "X-API-Key": [
+        ""
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/items/",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 8000,
+    "Timestamp": "2026-03-11T12:31:34.199Z",
+    "Scheme": "http"
+  }
+]

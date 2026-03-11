@@ -22,6 +22,7 @@ def test_integration():
     client = skyramp.Client()
     # Request Body
     endpoint_1_POST_request_body = r'''{
+        "category": "other",
         "description": "Temporary item for error handling test",
         "name": "Temp Item",
         "price": 9.99,
