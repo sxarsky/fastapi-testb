@@ -30,6 +30,7 @@ def test_endpoint_1_put():
 
     # Request Body
     endpoint_1_PUT_request_body = r'''{
+      "category": "electronics",
       "name": "Widget Pro Updated",
       "description": "An updated widget",
       "price": 39.99,
