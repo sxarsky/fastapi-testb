@@ -25,7 +25,8 @@ def test_integration():
         "description": "A test widget for validation",
         "name": "Test Widget",
         "price": 19.99,
-        "tax": 1.5
+        "tax": 1.5,
+        "category": "other"
     }'''
     
     # Execute Request
@@ -44,7 +45,8 @@ def test_integration():
         "description": "Update with negative price",
         "name": "Invalid Widget",
         "price": -5,
-        "tax": 0
+        "tax": 0,
+        "category": "other"
     }'''
     
     # Execute Request

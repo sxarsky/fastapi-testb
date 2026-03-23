@@ -33,11 +33,13 @@ def test_endpoint_1_put():
       "name": "Widget Pro Updated",
       "description": "An updated widget",
       "price": 39.99,
-      "tax": 3.50
+      "tax": 3.50,
+      "category": "other"
     }'''
-    
+
     # Fuzz strategies
     endpoint_1_put_fuzzed_body = {
+        "category": "invalid_category",
         "description": "0123456789",
         "name": "0123456789",
         "price": -10,
@@ -45,6 +47,7 @@ def test_endpoint_1_put():
     }
     # Fuzz status codes
     expected_endpoint_1_put_status_code = {
+        "category": "40x",
         "description": "40x",
         "name": "40x",
         "price": "40x",
@@ -52,6 +55,7 @@ def test_endpoint_1_put():
     }
     # Fuzz status codes for Null values
     expected_endpoint_1_put_null_status_code = {
+        "category": "40x",
         "description": "40x",
         "name": "40x",
         "price": "40x",
